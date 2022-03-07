@@ -1,0 +1,6 @@
+[submodule "CustomExtensions"]
+	path = CustomExtensions
+	url = https://github.com/DonTuel/CustomExtensions
+[submodule "twEditControls"]
+	path = twEditControls
+	url = https://github.com/DonTuel/twEditControls
