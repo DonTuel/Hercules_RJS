@@ -104,7 +104,6 @@ namespace Hercules_RJS
             cfg.window.main.State = "Normal";
             cfg.window.main.SplitContainer1SplitLocation = 460;
             cfg.window.preview.ShowLineNumbers = "True";
-            cfg.IsDirty = false;
             return cfg;
         }
 
@@ -131,11 +130,20 @@ namespace Hercules_RJS
             return sFileName;
         }
 
-        public void Save(string path)
+        public void Save(string namepath)
         {
+            char[] pSep = { '/', '\\' };
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty });
             var serializer = new XmlSerializer(typeof(XMLConfiguration));
-            using (var stream = new FileStream(path, FileMode.Create))
+            if (namepath.LastIndexOfAny(pSep) >= 0)
+            {
+                string path = namepath.Substring(0, namepath.LastIndexOfAny(pSep));
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+            }
+            using (var stream = new FileStream(namepath, FileMode.Create))
             {
                 serializer.Serialize(stream, this, ns);
             }

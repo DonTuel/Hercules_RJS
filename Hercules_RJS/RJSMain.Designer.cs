@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RJSMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuMainFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +60,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPreJobText = new twEditControls.EditBox();
+            this.txtPostJobText = new twEditControls.EditBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.rbPreJobFirstFile = new System.Windows.Forms.RadioButton();
             this.rbPreJobEveryFile = new System.Windows.Forms.RadioButton();
@@ -125,8 +127,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtPreJobText = new twEditControls.EditBox();
-            this.txtPostJobText = new twEditControls.EditBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -456,6 +456,50 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
+            // txtPreJobText
+            // 
+            this.txtPreJobText.AllowDrop = true;
+            this.txtPreJobText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanel4.SetColumnSpan(this.txtPreJobText, 2);
+            this.txtPreJobText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPreJobText.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreJobText.LineNumberPanelBackColor = System.Drawing.SystemColors.Control;
+            this.txtPreJobText.LineNumberPanelForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPreJobText.LineNumberPanelVisible = false;
+            this.txtPreJobText.LineNumberPanelWidth = 58;
+            this.txtPreJobText.Lines = new string[0];
+            this.txtPreJobText.Location = new System.Drawing.Point(115, 69);
+            this.txtPreJobText.Name = "txtPreJobText";
+            this.txtPreJobText.QualificationLength = 0;
+            this.txtPreJobText.QualificationStart = 0;
+            this.txtPreJobText.ReadOnly = false;
+            this.tableLayoutPanel4.SetRowSpan(this.txtPreJobText, 2);
+            this.txtPreJobText.SelectedText = "";
+            this.txtPreJobText.Size = new System.Drawing.Size(302, 281);
+            this.txtPreJobText.TabIndex = 20;
+            // 
+            // txtPostJobText
+            // 
+            this.txtPostJobText.AllowDrop = true;
+            this.txtPostJobText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanel4.SetColumnSpan(this.txtPostJobText, 2);
+            this.txtPostJobText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPostJobText.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPostJobText.LineNumberPanelBackColor = System.Drawing.SystemColors.Control;
+            this.txtPostJobText.LineNumberPanelForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPostJobText.LineNumberPanelVisible = false;
+            this.txtPostJobText.LineNumberPanelWidth = 58;
+            this.txtPostJobText.Lines = new string[0];
+            this.txtPostJobText.Location = new System.Drawing.Point(545, 69);
+            this.txtPostJobText.Name = "txtPostJobText";
+            this.txtPostJobText.QualificationLength = 0;
+            this.txtPostJobText.QualificationStart = 0;
+            this.txtPostJobText.ReadOnly = false;
+            this.tableLayoutPanel4.SetRowSpan(this.txtPostJobText, 2);
+            this.txtPostJobText.SelectedText = "";
+            this.txtPostJobText.Size = new System.Drawing.Size(303, 281);
+            this.txtPostJobText.TabIndex = 21;
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
@@ -724,14 +768,14 @@
             this.dgvCustomization.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCustomization.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomization.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCustomization.DetailsBackColor = System.Drawing.SystemColors.Window;
             this.dgvCustomization.DetailsCollapsedImage = null;
             this.dgvCustomization.DetailsExpandedImage = null;
@@ -1329,50 +1373,6 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(949, 457);
             this.tableLayoutPanel12.TabIndex = 4;
-            // 
-            // txtPreJobText
-            // 
-            this.txtPreJobText.AllowDrop = true;
-            this.txtPreJobText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel4.SetColumnSpan(this.txtPreJobText, 2);
-            this.txtPreJobText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPreJobText.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreJobText.LineNumberPanelBackColor = System.Drawing.SystemColors.Control;
-            this.txtPreJobText.LineNumberPanelForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtPreJobText.LineNumberPanelVisible = false;
-            this.txtPreJobText.LineNumberPanelWidth = 58;
-            this.txtPreJobText.Lines = new string[0];
-            this.txtPreJobText.Location = new System.Drawing.Point(115, 69);
-            this.txtPreJobText.Name = "txtPreJobText";
-            this.txtPreJobText.QualificationLength = 0;
-            this.txtPreJobText.QualificationStart = 0;
-            this.txtPreJobText.ReadOnly = false;
-            this.tableLayoutPanel4.SetRowSpan(this.txtPreJobText, 2);
-            this.txtPreJobText.SelectedText = "";
-            this.txtPreJobText.Size = new System.Drawing.Size(302, 281);
-            this.txtPreJobText.TabIndex = 20;
-            // 
-            // txtPostJobText
-            // 
-            this.txtPostJobText.AllowDrop = true;
-            this.txtPostJobText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel4.SetColumnSpan(this.txtPostJobText, 2);
-            this.txtPostJobText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPostJobText.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostJobText.LineNumberPanelBackColor = System.Drawing.SystemColors.Control;
-            this.txtPostJobText.LineNumberPanelForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtPostJobText.LineNumberPanelVisible = false;
-            this.txtPostJobText.LineNumberPanelWidth = 58;
-            this.txtPostJobText.Lines = new string[0];
-            this.txtPostJobText.Location = new System.Drawing.Point(545, 69);
-            this.txtPostJobText.Name = "txtPostJobText";
-            this.txtPostJobText.QualificationLength = 0;
-            this.txtPostJobText.QualificationStart = 0;
-            this.txtPostJobText.ReadOnly = false;
-            this.tableLayoutPanel4.SetRowSpan(this.txtPostJobText, 2);
-            this.txtPostJobText.SelectedText = "";
-            this.txtPostJobText.Size = new System.Drawing.Size(303, 281);
-            this.txtPostJobText.TabIndex = 21;
             // 
             // RJSMain
             // 

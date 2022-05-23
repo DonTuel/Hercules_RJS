@@ -97,6 +97,8 @@ namespace Hercules_RJS
 
             XMLConfig = XMLConfiguration.Load(XMLConfiguration.GetSaveFileName());
 
+            bool loadIsDirty = XMLConfig.IsDirty;
+
             Left = XMLConfig.window.main.Left;
             Top = XMLConfig.window.main.Top;
             Height = XMLConfig.window.main.Height;
@@ -164,7 +166,7 @@ namespace Hercules_RJS
                 ConnectToHercules();
             }
 
-            XMLConfig.IsDirty = false;
+            XMLConfig.IsDirty = loadIsDirty;
         }
 
         private void RJSMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -1452,9 +1454,13 @@ namespace Hercules_RJS
             }
             else
             {
-                dr = MessageBox.Show("There is nothing to preview.", "Preview empty", MessageBoxButtons.OK);
-                if (dr == DialogResult.No)
+                if (lines == null) { }
+                else
                 {
+                    dr = MessageBox.Show("There is nothing to preview.", "Preview empty", MessageBoxButtons.OK);
+                    if (dr == DialogResult.No)
+                    {
+                    }
                 }
             }
         }
